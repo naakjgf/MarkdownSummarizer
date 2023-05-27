@@ -143,7 +143,8 @@ public class MarkDownFile {
         String innerLine = scanner.nextLine();
 
         if (innerLine.startsWith("#")) {
-          headersAndImportantPoints.put(headerLine, extractImportantPoints(tempContentHolder.toString()));
+          headersAndImportantPoints.put(headerLine, extractImportantPoints(
+              tempContentHolder.toString()));
           headers.add(headerLine);
           headerLine = innerLine;
           tempContentHolder = new StringBuilder();
@@ -152,7 +153,8 @@ public class MarkDownFile {
         }
       }
 
-      headersAndImportantPoints.put(headerLine, extractImportantPoints(tempContentHolder.toString()));
+      headersAndImportantPoints.put(headerLine, extractImportantPoints(
+          tempContentHolder.toString()));
       headers.add(headerLine);
       scanner.close();
 

@@ -7,22 +7,31 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Map;
 
+/**
+ * A class that represents a study guide.
+ */
 public class StudyGuide {
+  private final ArrayList<MarkDownFile> files;
 
-  private ArrayList<MarkDownFile>  files;
-
-    public StudyGuide(String path, String orderFlag, String outputPath) {
-      MarkdownFileVisitor markdownFileVisitor = new MarkdownFileVisitor();
-      try {
-        Files.walkFileTree(Path.of(path), markdownFileVisitor);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-      files = markdownFileVisitor.getFiles();
-      orderFiles(orderFlag);
-      generateStudyGuide(Path.of(outputPath));
-      generateQuestionsAndAnswersFile();
+  /**
+   * A constructor for a study guide.
+   *
+   * @param path       the path of the file.
+   * @param orderFlag  the flag that determines how to order the files, can be one of
+   * @param outputPath the path of the output file.
+   */
+  public StudyGuide(String path, String orderFlag, String outputPath) {
+    MarkdownFileVisitor markdownFileVisitor = new MarkdownFileVisitor();
+    try {
+      Files.walkFileTree(Path.of(path), markdownFileVisitor);
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+    files = markdownFileVisitor.getFiles();
+    orderFiles(orderFlag);
+    generateStudyGuide(Path.of(outputPath));
+    generateQuestionsAndAnswersFile();
+  }
 
   /**
    * Generates a study guide in the file which is decided by the outputPath
@@ -33,7 +42,8 @@ public class StudyGuide {
   public void generateStudyGuide(Path outputPath) {
     StringBuilder sb = new StringBuilder();
     for (MarkDownFile file : files) {
-      Map<String, ArrayList<String>> headersAndImportantPoints = file.getHeadersAndImportantPoints();
+      Map<String, ArrayList<String>> headersAndImportantPoints =
+          file.getHeadersAndImportantPoints();
 
       for (String header : file.getHeaders()) {
         ArrayList<String> importantPoints = headersAndImportantPoints.get(header);
@@ -51,12 +61,12 @@ public class StudyGuide {
     }
   }
 
-    /**
-     * Orders the files in the study guide based on the order flag.
-     *
-     * @param orderFlag - the flag that determines how to order the files, can be one of
-     * "createDate", "fileName", or "modDate".
-     */
+  /**
+   * Orders the files in the study guide based on the order flag.
+   *
+   * @param orderFlag - the flag that determines how to order the files, can be one of
+   *                  "createDate", "fileName", or "modDate".
+   */
   public void orderFiles(String orderFlag) {
     switch (orderFlag) {
       case "createDate" -> files.sort(Comparator.comparing(MarkDownFile::getFileCreationDate));
@@ -74,14 +84,13 @@ public class StudyGuide {
     StringBuilder sb = new StringBuilder();
     for (MarkDownFile file : files) {
       for (String questionAndAnswer : file.getQuestionsAndAnswers()) {
-        sb.append(questionAndAnswer).append("\n");
+        sb.append("[[").append(questionAndAnswer).append("]]\n");
       }
     }
     try {
-        Files.writeString(Path.of(
-            "OutputStudyGuideFiles/QuestionsAndAnswers.sr"), sb.toString());
-        } catch (IOException e) {
-        e.printStackTrace();
+      Files.writeString(Path.of("OutputStudyGuideFiles/QuestionsAndAnswers.sr"), sb.toString());
+    } catch (IOException e) {
+      e.printStackTrace();
     }
   }
 

@@ -28,16 +28,18 @@ public class GameEndResultViewTest {
     GameEndResult result = new GameEndResult();
     GameEndResultView view = new GameEndResultView(result);
     view.display();
-    String expectedOutput = "Hard to Easy: 0\n" +
-        "Easy to Hard: 0\n" +
-        "Number of Hard Questions in Bank: 0\n" +
-        "Number of Easy Questions in Bank: 0\n" +
-        "Number of Questions Answered: 0\n" +
-        "null\n" +
-        "\n" +
-        "[Ending Study Session...]\n" +
-        "\n" +
-        "Your .sr file has been updated with your results for your next study session!\n";
+    String expectedOutput = """
+        Hard to Easy: 0
+        Easy to Hard: 0
+        Number of Hard Questions in Bank: 0
+        Number of Easy Questions in Bank: 0
+        Number of Questions Answered: 0
+        null
+
+        [Ending Study Session...]
+
+        Your .sr file has been updated with your results for your next study session!
+        """;
     assertEquals(expectedOutput, outContent.toString());
   }
 
