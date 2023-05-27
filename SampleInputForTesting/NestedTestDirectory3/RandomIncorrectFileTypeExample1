@@ -1,0 +1,23 @@
+# Git Basics
+- [[Git is a distributed version control system]] used for tracking changes in software development projects.
+- It allows collaboration, code management, and version tracking.
+
+## Repository
+- [[A repository is a central location]] where Git stores all project files and version history.
+- It includes branches, commits, and other Git objects.
+
+## Commit
+- [[A commit represents a specific version]] of the project at a given point in time.
+- It captures changes made to files and includes a commit message for documentation.
+
+## Branching
+- [[Branching allows creating independent lines of development]] in Git.
+- It enables working on different features or bug fixes simultaneously.
+
+## Merge
+- [[Merging combines changes]] from different branches into a single branch.
+- It allows incorporating code changes and resolving conflicts.
+
+## Remote Repository
+- [[A remote repository is a shared repository]] that can be accessed by multiple developers.
+- It facilitates collaboration and code sharing between team members.

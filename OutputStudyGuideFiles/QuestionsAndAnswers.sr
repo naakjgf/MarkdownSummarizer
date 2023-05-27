@@ -1,13 +1,13 @@
-What happens when a value is assigned to a Python variable?:::The variable is automatically declared and memory space is reserved.
-should the items in a Python list all be of the same data type?:::No, Python lists can contain items of different data types.
-Why does the algorithm compare its output with the correct outputs?::: To adjust the model accordingly and minimize the error.
-Does unsupervised learning need labeled data?:::No, unsupervised learning does not require labeled data.
-Why [ [Why should JavaScript variable names not start with a numeral?::: Because it would lead to a syntax error.
-can arrays in JavaScript hold elements of different data types?:::Yes, JavaScript arrays can contain elements of different data types.
-Why is SQL important?:::SQL is the standard language for relational database management systems. It is used for managing and organizing data in all sorts of systems in which various data relationships exist.
-Can NoSQL replace SQL?:::NoSQL databases are not a replacement for SQL databases. They are an alternative. Certain data sets work better under a NoSQL database than in a SQL database and vice versa.
-Why is cybersecurity important?:::With an increasing amount of sensitive data being stored online, cybersecurity is important to protect it from potential threats, which could lead to financial loss and damage to reputation.
-Can cybersecurity prevent all attacks?:::While effective cybersecurity can greatly reduce the chances of successful attacks, it's important to note that no system can be completely secure. Continual monitoring and updating are essential.
-Some important [brackets] ::: works as expected! 
-Why should data types of arrays need to match?::: Because the reference is pointing to the array object.
-should numberOfElements be a Positive Integer or a Negative Int?:::Positive Integer.
+[[Some important [brackets] ::: works as expected! ]]
+[[Why should data types of arrays need to match?::: Because the reference is pointing to the array object.]]
+[[should numberOfElements be a Positive Integer or a Negative Int?:::Positive Integer.]]
+[[Why is cybersecurity important?:::With an increasing amount of sensitive data being stored online, cybersecurity is important to protect it from potential threats, which could lead to financial loss and damage to reputation.]]
+[[Can cybersecurity prevent all attacks?:::While effective cybersecurity can greatly reduce the chances of successful attacks, it's important to note that no system can be completely secure. Continual monitoring and updating are essential.]]
+[[Why is SQL important?:::SQL is the standard language for relational database management systems. It is used for managing and organizing data in all sorts of systems in which various data relationships exist.]]
+[[Can NoSQL replace SQL?:::NoSQL databases are not a replacement for SQL databases. They are an alternative. Certain data sets work better under a NoSQL database than in a SQL database and vice versa.]]
+[[Why [ [Why should JavaScript variable names not start with a numeral?::: Because it would lead to a syntax error.]]
+[[can arrays in JavaScript hold elements of different data types?:::Yes, JavaScript arrays can contain elements of different data types.]]
+[[Why does the algorithm compare its output with the correct outputs?::: To adjust the model accordingly and minimize the error.]]
+[[Does unsupervised learning need labeled data?:::No, unsupervised learning does not require labeled data.]]
+[[What happens when a value is assigned to a Python variable?:::The variable is automatically declared and memory space is reserved.]]
+[[should the items in a Python list all be of the same data type?:::No, Python lists can contain items of different data types.]]
