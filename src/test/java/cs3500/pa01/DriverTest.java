@@ -3,6 +3,7 @@ package cs3500.pa01;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import cs3500.Driver;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
